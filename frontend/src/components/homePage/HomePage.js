@@ -1,4 +1,7 @@
 import React from 'react';
+import CarouselOffers from './CarouselOffers';
+import Movies from './Movies';
+import './HomePage.css';
 
 class HomePage extends React.Component {
     constructor(){
@@ -10,7 +13,10 @@ class HomePage extends React.Component {
 
     render(){
         return(
-            <div>HomePage</div>
+            <div>
+               <CarouselOffers/>
+               <Movies/>
+            </div>
         )
     }
 }
