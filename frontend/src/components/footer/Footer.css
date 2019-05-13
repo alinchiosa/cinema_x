@@ -1,0 +1,16 @@
+.footerContainer{
+    background-image: url("./../../images/footer.jpg");
+    display: flex;
+    justify-content: space-around;
+}
+
+.about{
+    display: flex;
+    flex-direction: column;
+    
+}
+
+.follow{
+    display: flex;
+    flex-direction: column;
+}
