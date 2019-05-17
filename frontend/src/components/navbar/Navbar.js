@@ -2,6 +2,8 @@ import React from 'react';
 import './Navbar.css';
 import {NavLink} from 'react-router-dom';
 import Dropdown from 'react-bootstrap/Dropdown';
+import Form from 'react-bootstrap/Form';
+
 
 class Navbar extends React.Component {
     constructor () {
@@ -29,7 +31,9 @@ class Navbar extends React.Component {
                             </Dropdown.Menu>
                         </Dropdown>
                     </div>
-                    <input type="text" placeholder='movies' />
+                    <div classname="search">
+                        <Form.Control type="text" placeholder="Search.."/>
+                    </div>
                     <div className="connection">
                         <NavLink to='/login'>Log in/</NavLink>
                         <NavLink to='/signup'>Sign up</NavLink>
