@@ -7,6 +7,8 @@ var logger = require('morgan');
 var indexRouter = require('./routes/index');
 var usersRouter = require('./routes/users');
 
+require('./db');
+
 var app = express();
 
 // view engine setup
@@ -35,7 +37,7 @@ app.use(function(err, req, res, next) {
 
   // render the error page
   res.status(err.status || 500);
-  res.render('error');
+  res.json({ error: err.message });
 });
 
 module.exports = app;
