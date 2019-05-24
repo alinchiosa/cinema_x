@@ -20,6 +20,14 @@ module.exports = (sequelize, DataTypes) => {
         // options
       }
     );
+
+    Seat.associate = (models) => {
+        Seat.hasMany(models.Booking, {
+            foreignKey:"seatId",
+            as: 'seat',
+        });
+    };
+
   
     return Seat;
   };

@@ -33,6 +33,39 @@ module.exports = (sequelize, DataTypes) => {
       }
     );
   
+
+    Movie.associate = (models) => {
+      Movie.hasMany(models.Screening, {
+          foreignKey:"movieId",
+          as: 'movie',
+      });
+
+      Movie.associate = (models) => {
+        Movie.belongsToMany(models.Actor, {
+          through: 'ActorsInMovie',
+          foreignKey:"movieId",
+          as: 'actor'
+        });  
+      };
+
+      Movie.associate = (models) => {
+        Movie.belongsToMany(models.Director, {
+          through: 'DirectorsOfMovie',
+          foreignKey:"movieId",
+          as: 'director'
+        });
+      };
+
+      Movie.associate = (models) => {
+        Movie.belongsToMany(models.Genre, {
+          through: 'GenresOfMovie',
+            foreignKey:"movieId",
+            as: 'genre'
+        });
+      };
+  };
+
+
     return Movie;
   };
   

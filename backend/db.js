@@ -1,6 +1,6 @@
 const Sequelize = require('sequelize');
 
-const modelNames = ['User', 'Movie', 'Room', 'Seat', 'Actor', 'Director', 'Genre'];
+const modelNames = ['User', 'Movie', 'Room', 'Booking', 'Actor', 'Director', 'Genre', 'Seat', 'Screening'];
 const models = {};
 
 const sequelize = new Sequelize('cinema', 'root', 'root', {
@@ -11,7 +11,8 @@ const sequelize = new Sequelize('cinema', 'root', 'root', {
 sequelize
   .authenticate()
   .then(() => {
-    sequelize.sync({ logging: false });
+    sequelize.sync({ logging: false});
+    
     console.log('Connection to database OK');
   })
   .catch(err => {
@@ -23,4 +24,10 @@ modelNames.forEach(modelName => {
   models[modelName] = sequelize.import(__dirname + `/models/${modelName}.js`);
 });
 
+Object.keys(models).forEach((modelName) => {
+  if ('associate' in models[modelName]) models[modelName].associate(models);
+});
+
+
 module.exports = { sequelize, models };
+

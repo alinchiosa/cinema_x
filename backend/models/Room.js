@@ -16,6 +16,13 @@ module.exports = (sequelize, DataTypes) => {
         // options
       }
     );
+
+    Room.associate = (models) => {
+      Room.hasMany(models.Screening, {
+          foreignKey:"roomId",
+          as: 'screening'
+      });
+  };
   
     return Room;
   };
