@@ -42,7 +42,7 @@ module.exports = (sequelize, DataTypes) => {
 
       Movie.associate = (models) => {
         Movie.belongsToMany(models.Actor, {
-          through: 'ActorsInMovie',
+          through: 'ActorsInMovies',
           foreignKey:"movieId",
           as: 'actor'
         });  
@@ -50,7 +50,7 @@ module.exports = (sequelize, DataTypes) => {
 
       Movie.associate = (models) => {
         Movie.belongsToMany(models.Director, {
-          through: 'DirectorsOfMovie',
+          through: 'DirectorsOfMoviess',
           foreignKey:"movieId",
           as: 'director'
         });
@@ -58,7 +58,7 @@ module.exports = (sequelize, DataTypes) => {
 
       Movie.associate = (models) => {
         Movie.belongsToMany(models.Genre, {
-          through: 'GenresOfMovie',
+          through: 'GenresOfMovies',
             foreignKey:"movieId",
             as: 'genre'
         });

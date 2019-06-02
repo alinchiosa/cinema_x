@@ -22,10 +22,11 @@ module.exports = (sequelize, DataTypes) => {
     );
 
     Seat.associate = (models) => {
-        Seat.hasMany(models.Booking, {
+        Seat.hasOne(models.Booking, {
             foreignKey:"seatId",
             as: 'seat',
         });
+        
     };
 
   
