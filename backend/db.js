@@ -1,6 +1,6 @@
 const Sequelize = require('sequelize');
 
-const modelNames = ['User', 'Movie', 'Room', 'Booking', 'Actor', 'Director', 'Genre', 'Seat', 'Screening'];
+const modelNames = ['User', 'Movie', 'Room', 'Booking', 'Actor', 'Director', 'Genre', 'Seat', 'Screening', 'DirectorsOfMovies', 'GenresOfMovies', 'ActorsInMovies'];
 const models = {};
 
 const sequelize = new Sequelize('cinema', 'root', 'root', {
