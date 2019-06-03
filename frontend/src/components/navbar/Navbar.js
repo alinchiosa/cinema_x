@@ -31,7 +31,7 @@ class Navbar extends React.Component {
                             </Dropdown.Menu>
                         </Dropdown>
                     </div>
-                    <div classname="search">
+                    <div className="search">
                         <Form.Control type="text" placeholder="Search.."/>
                     </div>
                     <div className="connection">
