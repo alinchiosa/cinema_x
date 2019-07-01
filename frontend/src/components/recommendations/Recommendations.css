@@ -1,0 +1,20 @@
+.recommendationsPageContainer {
+    height: 62.7vh;
+
+}
+
+.recommendationsContainer {
+    margin-top: 2em;
+    display: flex;
+    align-content: center;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+    /* height: 64.5vh; */
+}
+
+.title {
+    margin-top: 2em;
+    margin-left: 5em;
+    margin-right: 5em;
+}

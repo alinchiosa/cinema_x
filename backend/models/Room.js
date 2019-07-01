@@ -1,33 +1,32 @@
 module.exports = (sequelize, DataTypes) => {
-    const Room = sequelize.define(
-      'room',
-      {
-        // attributes
-        roomType: {
-          type: DataTypes.STRING,
-          allowNull: false,
-        },
-        noOfRows: {
-            type: DataTypes.INTEGER,
-            allowNull: false
-        }
+  const Room = sequelize.define(
+    "room",
+    {
+      // attributes
+      roomType: {
+        type: DataTypes.STRING,
+        allowNull: false
       },
-      {
-        // options
+      noOfRows: {
+        type: DataTypes.INTEGER,
+        allowNull: false
       }
-    );
+    },
+    {
+      timestamp: false
+    }
+  );
 
-    Room.associate = (models) => {
-      Room.hasMany(models.Screening, {
-          foreignKey:"roomId",
-          as: 'screening'
-      });
-      Room.hasMany(models.Seat, {
-        foreignKey: "roomId",
-        as: 'seat'
-      })
+  Room.associate = models => {
+    Room.hasMany(models.Screening, {
+      foreignKey: "roomId",
+      as: "screening"
+    });
+    Room.hasMany(models.Seat, {
+      foreignKey: "roomId",
+      as: "seat"
+    });
   };
-  
-    return Room;
-  };
-  
+
+  return Room;
+};

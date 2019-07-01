@@ -1,4 +1,4 @@
-.loginContainer{
+.loginContainer {
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -7,20 +7,21 @@
     /* margin-top: 9%; */
     margin-top: 7em;
     margin-bottom: 9.7em;
+    min-height: 33vh;
 }
 
-.inputFields{
+.inputFields {
     display: flex;
     flex-direction: column;
 }
 
-.sign{
+.sign {
     display: flex;
     flex-direction: row;
     align-items: center;
     border-top: 20px;
 }
 
-.inputField{
+.inputField {
     max-width: 10em;
 }

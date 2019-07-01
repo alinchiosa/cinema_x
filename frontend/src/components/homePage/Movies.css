@@ -1,4 +1,4 @@
-.movies{
+.movies {
     margin-left: 30px;
     display: flex;
     font-size: 13px;
@@ -8,7 +8,7 @@
     align-items: center;
 }
 
-.movie{
+.movie {
     margin-top: 5em;
     margin: 2em;
     border-style: solid;
@@ -22,7 +22,7 @@
 
 }
 
-.movieChild{
+.movieChild {
     flex-grow: 1;
     display: flex;
     flex-direction: column;
@@ -30,8 +30,9 @@
     /* height: 100px; */
     align-items: center;
     justify-content: space-around;
+    width: 18em;
 }
 
-.movieText{
+.movieText {
     margin-top: 1em;
 }

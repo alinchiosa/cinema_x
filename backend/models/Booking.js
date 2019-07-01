@@ -1,33 +1,30 @@
 module.exports = (sequelize, DataTypes) => {
-    const Booking = sequelize.define(
-      'booking',
-      {
-        // attributes
-      },
-      {
-        // options
-      }
-    );
+  const Booking = sequelize.define(
+    "booking",
+    {
+      // attributes
+    },
+    {
+      timestamp: false
+    }
+  );
 
-    Booking.associate = (models) => {
-      // Booking.hasMany(models.Seat, {
-      //     foreignKey:"bookingId",
-      //     as: 'seats'
-      // });
+  Booking.associate = models => {
+    // Booking.hasMany(models.Seat, {
+    //     foreignKey:"bookingId",
+    //     as: 'seats'
+    // });
 
-      // Booking.belongsTo(models.User, {
-      //   foreignKey:"bookingId",
-      //   as: 'user'
-      //   });
+    // Booking.belongsTo(models.User, {
+    //   foreignKey:"bookingId",
+    //   as: 'user'
+    //   });
 
-      Booking.belongsTo(models.Screening, {
-        foreignKey:"screeningId",
-        as: 'screening'
-      });
-    };
-
-
-    
-    return Booking;
+    Booking.belongsTo(models.Screening, {
+      foreignKey: "screeningId",
+      as: "screening"
+    });
   };
-  
+
+  return Booking;
+};

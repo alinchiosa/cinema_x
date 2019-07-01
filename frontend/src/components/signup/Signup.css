@@ -1,22 +1,23 @@
-.signupContainer{
+.signupContainer {
     display: flex;
     align-items: center;
     justify-content: center;
     flex-direction: column;
-    margin-top:1em;
+    margin-top: 1em;
     margin-bottom: 1.1em;
+    min-height: 63vh;
 }
 
-.formField{
+.formField {
     display: flex;
     flex-direction: row;
     align-items: center;
 }
 
-.formLabel{
+.formLabel {
     width: 7em;
 }
 
-.formText{
+.formText {
     width: 10em;
 }

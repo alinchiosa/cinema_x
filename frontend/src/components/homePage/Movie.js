@@ -2,8 +2,6 @@ import React from "react";
 import "./Movies.css";
 
 function Movie(props) {
-  console.log("----------------------");
-  console.log(props);
   let showDirectors = () => {
     let directors = "";
     props.movie.directors.forEach(director => {
